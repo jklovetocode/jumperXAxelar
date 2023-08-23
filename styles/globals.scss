@@ -1,0 +1,86 @@
+@use 'sass:math';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.grass {
+  background: rgba(255, 255, 255, 0.075);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(13px);
+  border-color: rgba(255, 255, 255, 0.48);
+  border-width: 0.5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  overflow: hidden;
+}
+
+#scene {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  position: relative;
+  perspective: 1000px;
+  animation: rotate-scene 60s linear infinite;
+
+  @keyframes rotate-scene {
+    from {
+      transform: rotateZ(0deg);
+    }
+    to {
+      transform: rotateZ(360deg);
+    }
+  }
+}
+
+.star {
+  $spread: 20px;
+  $number: 10;
+  $off: 0.5 * ($number - 1) * $spread;
+  $speed: 7s;
+  position: absolute;
+  opacity: 0;
+  width: 250px;
+  height: 1px;
+  border-radius: 100%;
+  background: linear-gradient(90deg, hsl(60, 64%, 96%), #fff0);
+  animation: animate-star #{$speed} var(--delay) infinite;
+  @for $i from 0 to $number {
+    @for $j from 0 to $number {
+      &:nth-child(#{$number * $i + $j + 1}) {
+        $x: $i * $spread - $off;
+        $y: $j * $spread - $off;
+        --x: #{$x};
+        --y: #{$y};
+        --delay: #{math.random() * $speed};
+      }
+    }
+  }
+
+  @keyframes animate-star {
+    0% {
+      opacity: 0;
+      transform: translateX(var(--x)) translateY(var(--y)) translateZ(0px)
+        rotateY(90deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(var(--x)) translateY(var(--y)) translateZ(1400px)
+        rotateY(90deg);
+    }
+  }
+}
