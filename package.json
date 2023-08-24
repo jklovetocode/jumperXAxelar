@@ -10,10 +10,12 @@
     "@rainbow-me/rainbowkit": "^0.12.0",
     "@types/animejs": "^3.1.7",
     "animejs": "^3.2.1",
+    "awesome-toast-component": "^2.0.6",
     "ethers": "^5.7.2",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-use": "^17.4.0",
     "sass": "^1.66.1",
     "wagmi": "^0.12.1"
