@@ -83,13 +83,16 @@ function MyApp({ Component, pageProps }: AppProps) {
           })}
         >
           <Theme>
-            <div className='relative h-full max-h-screen overflow-hidden text-white bg-black w-full'>
+            <div className='relative h-full max-h-screen overflow-hidden text-white bg-black w-full z-[0]'>
               <Header />
               <Component {...pageProps} />
               <Footer />
-              <div id='scene' className='absolute left-0 top-0 w-auto z-[0]'>
+              <div
+                id='scene'
+                className='absolute top-1/2 -translate-y-1/2 w-full z-[1]'
+              >
                 {star.map((x, y) => {
-                  return <div className='star' key={`${x}-${y}`}></div>
+                  return <div className='star z-[1]' key={`${x}-${y}`}></div>
                 })}
               </div>
             </div>
