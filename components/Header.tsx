@@ -5,7 +5,7 @@ type Props = {}
 function Header({}: Props) {
   return (
     <div className='fixed top-0 w-full'>
-      <div className=' h-max p-[5px] flex justify-end'>
+      <div className=' h-max p-[10px] flex justify-end'>
         <ConnectButton
           label='connect web3'
           accountStatus={'full'}

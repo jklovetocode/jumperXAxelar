@@ -51,13 +51,13 @@ body {
   $spread: 20px;
   $number: 10;
   $off: 0.5 * ($number - 1) * $spread;
-  $speed: 7s;
+  $speed: 3s;
   position: absolute;
   opacity: 0;
-  width: 250px;
-  height: 1px;
+  width: 125px;
+  height: 0.5px;
   border-radius: 100%;
-  background: linear-gradient(90deg, hsl(60, 64%, 96%), #fff0);
+  background: linear-gradient(90deg, hsl(237, 100%, 89%), #fff0);
   animation: animate-star #{$speed} var(--delay) infinite;
   @for $i from 0 to $number {
     @for $j from 0 to $number {
@@ -79,7 +79,7 @@ body {
     }
     100% {
       opacity: 1;
-      transform: translateX(var(--x)) translateY(var(--y)) translateZ(1400px)
+      transform: translateX(var(--x)) translateY(var(--y)) translateZ(1000px)
         rotateY(90deg);
     }
   }

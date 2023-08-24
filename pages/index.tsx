@@ -3,12 +3,7 @@ import { useEffect, useState } from 'react'
 import anime from 'animejs'
 import NormButton from '../components/common/NormButton'
 export default function () {
-  let [star, setStar] = useState([] as number[])
   useEffect(() => {
-    for (let i = 0; i < 50; i++) {
-      star.push(i)
-    }
-    setStar([...star])
     anime({
       targets: [document.getElementById('title_jxa')],
       opacity: [0.4, 0.6, 0.4, 0.6, 0.4, 0.6, 0.4, 0.6, 0.4, 0.6, 0.4, 1],
@@ -17,11 +12,11 @@ export default function () {
     })
     anime({
       targets: [document.getElementById('nft-minted')],
-      innerHTML: [`0`, `9,932`, '125,421'],
+      innerHTML: ['1,111', '6,832', '49,251', '87,421', '125,421'],
       easings: 'easeInOutExpo',
       round: 1,
       duration: 1000,
-      delay: 750,
+      delay: 300,
     })
   }, [])
   return (
@@ -74,11 +69,6 @@ export default function () {
             />
           </div>
         </div>
-      </div>
-      <div id='scene' className=' absolute left-0 top-0 h-full w-full z-[0]'>
-        {star.map((x, y) => {
-          return <div className='star' key={`${x}-${y}`}></div>
-        })}
       </div>
     </div>
   )

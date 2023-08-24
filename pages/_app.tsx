@@ -19,6 +19,7 @@ import { ContractProvider } from '../context/contractContext'
 import Header from '../components/Header'
 import { Theme } from '@radix-ui/themes'
 import Footer from '../components/Footer'
+import { useEffect, useState } from 'react'
 
 const hardhat: Chain = {
   id: 31337,
@@ -62,6 +63,13 @@ const wagmiClient = createClient({
 })
 
 function MyApp({ Component, pageProps }: AppProps) {
+  let [star, setStar] = useState([] as number[])
+  useEffect(() => {
+    for (let i = 0; i < 50; i++) {
+      star.push(i)
+    }
+    setStar([...star])
+  }, [])
   return (
     <ContractProvider>
       <WagmiConfig client={wagmiClient}>
@@ -75,10 +83,15 @@ function MyApp({ Component, pageProps }: AppProps) {
           })}
         >
           <Theme>
-            <div className='h-screen max-h-screen overflow-hidden text-white bg-black -z-[10]'>
+            <div className='relative h-full max-h-screen overflow-hidden text-white bg-black w-full'>
               <Header />
               <Component {...pageProps} />
               <Footer />
+              <div id='scene' className='absolute left-0 top-0 w-auto z-[0]'>
+                {star.map((x, y) => {
+                  return <div className='star' key={`${x}-${y}`}></div>
+                })}
+              </div>
             </div>
           </Theme>
         </RainbowKitProvider>
