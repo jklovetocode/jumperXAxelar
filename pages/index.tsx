@@ -44,7 +44,6 @@ export default function () {
           <span>NFT HAS MINTED.</span>
         </div>
         <div className=' flex gap-x-[20px] text-lg'>
-          <NormButton label='JOIN' />
           <NormButton label='MINT' />
         </div>
         <div className=' flex gap-x-[20px] justify-center items-center'>

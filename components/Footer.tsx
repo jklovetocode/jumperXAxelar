@@ -13,17 +13,17 @@ export default function () {
   return (
     <div className=' h-[300px] fixed grass top-1/2 -translate-y-1/2 right-[20px] py-[20px]  px-[10px] flex flex-col items-center justify-around rounded-xl text-[25px] z-[10]'>
       {Icon_Set.map((x) => (
-        <button
+        <div
           key={x.path}
           onClick={() => router.push(x.path)}
           className={
             (isCurrentRoute === x.path
               ? ' p-1.5 bg-blue-500/40 rounded-full  '
-              : '  ') + ' hover:scale-[115%] '
+              : '  ') + ' hover:scale-[115%] cursor-pointer '
           }
         >
           <Icon color='white' icon={x.name}></Icon>
-        </button>
+        </div>
       ))}
     </div>
   )

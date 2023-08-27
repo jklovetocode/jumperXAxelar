@@ -87,10 +87,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               <Header />
               <Component {...pageProps} />
               <Footer />
-              <div
-                id='scene'
-                className='absolute top-1/2 -translate-y-1/2 w-full z-[1]'
-              >
+              <div id='scene'>
                 {star.map((x, y) => {
                   return <div className='star z-[1]' key={`${x}-${y}`}></div>
                 })}

@@ -27,6 +27,12 @@ body {
   overflow: hidden;
 }
 
+@layer components {
+  Button {
+    @apply border border-white/50 hover:border-black/50 py-1 px-4 rounded-lg hover:bg-white hover:text-black  font-semibold;
+  }
+}
+
 #scene {
   min-height: 100vh;
   display: flex;
