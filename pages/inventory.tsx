@@ -1,8 +1,9 @@
 import Image from 'next/image'
-import { Button, Dialog, Flex, Text, TextField } from '@radix-ui/themes'
+import { Button, Dialog } from '@radix-ui/themes'
+import { useState } from 'react'
 
 export default function () {
-  const chain = [
+  const chainList = [
     { text: 'AVALANCHE', src: '/avax.png' },
     { text: 'FANTOM', src: '/fantom.png' },
     { text: 'POLYGON', src: '/matic.png' },
@@ -65,6 +66,12 @@ export default function () {
       },
     },
   ]
+  // current chain / selected chain state
+  const [chain, setChain] = useState('AVALANCHE')
+  // function to bridge
+  const bridge = () => {
+    console.log('bridge...')
+  }
   return (
     <div className=' h-full w-full '>
       <div className=' absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] grass rounded-xl grid grid-cols-3 overflow-y-scroll p-[10px] z-[10] items-center justify-center gap-y-[20px]'>
@@ -101,11 +108,15 @@ export default function () {
                     Select Destination Chain.
                   </Dialog.Description>
                   <div className=' grid grid-cols-3 gap-[10px] w-full '>
-                    {chain.map((x, y) => (
+                    {chainList.map((x, y) => (
                       <div
                         tabIndex={-1}
                         key={`${x.text}-${y}`}
-                        className=' p-[5px] border border-white/30 rounded-lg w-full h-max flex justify-center items-center cursor-pointer hover:bg-white/20 focus:bg-white/30'
+                        className={[
+                          ' p-[5px] border border-white/30 rounded-lg w-full h-max flex justify-center items-center cursor-pointer hover:bg-white/20 ',
+                          x.text === chain ? ' bg-white/30' : '',
+                        ].toString()}
+                        onClick={() => setChain(x.text)}
                       >
                         <Image
                           alt=''
@@ -124,7 +135,7 @@ export default function () {
                     <Dialog.Close>
                       <Button>Cancel</Button>
                     </Dialog.Close>
-                    <Dialog.Close>
+                    <Dialog.Close onClick={() => bridge()}>
                       <Button>Bridge</Button>
                     </Dialog.Close>
                   </div>
