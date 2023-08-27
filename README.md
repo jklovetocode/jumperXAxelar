@@ -1,27 +1,32 @@
-# Next.js + Tailwind CSS Example
+<h1 align="center" id="title" >Jumper X Axelar</h1>
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+<h1 align="center" ><img align="center"  src="https://socialify.git.ci/tintinInGitHub/jumper-smart-contract/image?description=1&descriptionEditable=Jumper%20X%20Axelar%20is%20NFT%20cross-chain%20bridge%20for%20NFTs%20activity-point-based%20rewards%2Ccompetitive%20leaderboard%20and%20decentralized%20governance.&name=1&pattern=Brick%20Wall&theme=Light" alt="jumper-smart-contract" width="640" height="320" /></h1>
+  
+<p id="description">Jumper X Axelar is NFT minting cross-chain bridge for NFTs activity-point-based rewards , competitive leaderboard and decentralized governance that aim to build A versatile ecosystem that empowers creators collectors and participants fostering cross-chain collaboration and community-driven growth .</p>
 
-## Deploy your own
+<h2>Project Screenshots:</h2>
+<p>
+<h1 align="center" ><img align="center"  src="https://github.com/tintinInGitHub/jumper-smart-contract/assets/72849666/2958c0a0-bd87-4649-8348-8a1593f22d79" alt="jumper-smart-contract" width="640" height="320" /></h1>
+  <h1 align="center" ><img align="center"  src="https://github.com/tintinInGitHub/jumper-smart-contract/assets/72849666/32acdd6f-c0bd-4372-bce5-f29127d748bd" alt="jumper-smart-contract" width="640" height="320" /></h1>
+</p>
+  
+  
+<h2>🧐 Features</h2>
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+Here're some of the project's best features:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+*   Mint Cross-Chain NFTs
+*   Bridge Cross-Chain NFTs
+*   Activity-Point-Based Rewards System
+*   Competitive Leader Board
+*   DAO
 
-## How to use
+  
+  
+<h2>💻 Built with</h2>
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+Technologies used in the project:
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+*   Solidity
+*   Axelar
+*   TypeScript
