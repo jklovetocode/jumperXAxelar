@@ -83,6 +83,7 @@ export default function () {
                   width: 200,
                   aspectRatio: 'auto',
                 }}
+                priority={true}
               />
               <div> Level: {x.attr.level}</div>
               <div> Point: {x.attr.point}</div>
@@ -101,7 +102,11 @@ export default function () {
                   </Dialog.Description>
                   <div className=' grid grid-cols-3 gap-[10px] w-full '>
                     {chain.map((x, y) => (
-                      <div className=' p-[5px] border border-white/30 rounded-lg w-full h-max flex justify-center items-center cursor-pointer hover:bg-white/20'>
+                      <div
+                        tabIndex={-1}
+                        key={`${x.text}-${y}`}
+                        className=' p-[5px] border border-white/30 rounded-lg w-full h-max flex justify-center items-center cursor-pointer hover:bg-white/20 focus:bg-white/30'
+                      >
                         <Image
                           alt=''
                           src={x.src}
