@@ -64,16 +64,6 @@ export default function () {
       status: false,
     },
     {
-      name: 'FTMer',
-      info: 'Bridge NTFs from FTM chain 5 times',
-      status: false,
-    },
-    {
-      name: 'FTMer',
-      info: 'Bridge NTFs from FTM chain 5 times',
-      status: false,
-    },
-    {
       name: 'AVAXer',
       info: 'Bridge NTFs from AVAX chain 5 times',
       status: false,
