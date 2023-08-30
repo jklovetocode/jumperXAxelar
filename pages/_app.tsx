@@ -2,7 +2,7 @@ import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
 // import '@radix-ui/themes/styles.css'
 import { WagmiConfig, createClient, configureChains } from 'wagmi'
-import { fantomTestnet } from 'wagmi/chains'
+import { avalancheFuji, fantomTestnet, polygonMumbai } from 'wagmi/chains'
 import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { infuraProvider } from 'wagmi/providers/infura'
 import { publicProvider } from 'wagmi/providers/public'
@@ -20,29 +20,11 @@ import Header from '../components/Header'
 import { Theme } from '@radix-ui/themes'
 import Footer from '../components/Footer'
 import { useEffect, useState } from 'react'
-
-const hardhat: Chain = {
-  id: 31337,
-  name: 'Hardhat',
-  network: 'Harthat at http://127.0.0.1:8545/',
-  nativeCurrency: {
-    decimals: 18,
-    name: 'Ether',
-    symbol: 'Eth',
-  },
-  rpcUrls: {
-    default: {
-      http: ['http://127.0.0.1:8545/'],
-    },
-    public: {
-      http: ['http://127.0.0.1:8545/'],
-    },
-  },
-  testnet: true,
-}
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const { chains, provider } = configureChains(
-  [fantomTestnet, hardhat],
+  [fantomTestnet,avalancheFuji,polygonMumbai],
   [
     alchemyProvider({ apiKey: '' }),
     infuraProvider({ apiKey: '' }),
@@ -86,6 +68,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <div className='relative h-full max-h-screen overflow-hidden text-white bg-black w-full z-[0]'>
               <Header />
               <Component {...pageProps} />
+              <ToastContainer position='top-center' className="" theme="dark" hideProgressBar={true}  />
               <Footer />
               <div id='scene'>
                 {star.map((x, y) => {
