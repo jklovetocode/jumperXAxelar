@@ -45,32 +45,32 @@ export default function () {
   const dailyQuest = [
     {
       name: 'Bridge together I',
-      info: 'Bridge NTFs to other chain 1 times',
+      info: 'Bridge NFTs to other chain 1 times',
       status: true,
     },
     {
       name: 'Bridge together II',
-      info: 'Bridge NTFs to other chain 3 times',
+      info: 'Bridge NFTs to other chain 3 times',
       status: false,
     },
     {
       name: 'Bridge together III',
-      info: 'Bridge NTFs to other chain 5 times',
+      info: 'Bridge NFTs to other chain 5 times',
       status: false,
     },
     {
       name: 'FTMer',
-      info: 'Bridge NTFs from FTM chain 5 times',
+      info: 'Bridge NFTs from FTM chain 5 times',
       status: false,
     },
     {
       name: 'AVAXer',
-      info: 'Bridge NTFs from AVAX chain 5 times',
+      info: 'Bridge NFTs from AVAX chain 5 times',
       status: false,
     },
     {
       name: 'MATICer',
-      info: 'Bridge NTFs from MATIC chain 5 times',
+      info: 'Bridge NFTs from MATIC chain 5 times',
       status: false,
     },
     {
@@ -92,12 +92,12 @@ export default function () {
   const weeklyQuest = [
     {
       name: 'Evolution  NFTs II',
-      info: 'Evolution you NTFs to level 1',
+      info: 'Evolution you NFTs to level 1',
       status: false,
     },
     {
       name: 'Evolution  NFTs II',
-      info: 'Evolution you NTFs to level 2',
+      info: 'Evolution you NFTs to level 2',
       status: false,
     },
     {
