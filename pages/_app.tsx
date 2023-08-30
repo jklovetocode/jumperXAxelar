@@ -22,9 +22,10 @@ import Footer from '../components/Footer'
 import { useEffect, useState } from 'react'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Head from 'next/head'
 
 const { chains, provider } = configureChains(
-  [fantomTestnet,avalancheFuji,polygonMumbai],
+  [fantomTestnet, avalancheFuji, polygonMumbai],
   [
     alchemyProvider({ apiKey: '' }),
     infuraProvider({ apiKey: '' }),
@@ -54,6 +55,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [])
   return (
     <ContractProvider>
+      <Head>
+        <title>Jumper X Axelar</title>
+        <link rel='icon' href='/logo.png' />
+      </Head>
       <WagmiConfig client={wagmiClient}>
         <RainbowKitProvider
           coolMode
@@ -68,7 +73,12 @@ function MyApp({ Component, pageProps }: AppProps) {
             <div className='relative h-full max-h-screen overflow-hidden text-white bg-black w-full z-[0]'>
               <Header />
               <Component {...pageProps} />
-              <ToastContainer position='top-center' className="" theme="dark" hideProgressBar={true}  />
+              <ToastContainer
+                position='top-center'
+                className=''
+                theme='dark'
+                hideProgressBar={true}
+              />
               <Footer />
               <div id='scene'>
                 {star.map((x, y) => {

@@ -32,26 +32,25 @@ body {
     @apply border border-white/50 hover:border-black/50 py-1 px-4 rounded-lg hover:bg-white hover:text-black  font-semibold;
   }
 
-    .loader {
-      width: 48px;
-      height: 48px;
-      border: 5px solid;
-      border-color: #FF3D00 transparent;
-      border-radius: 50%;
-      display: inline-block;
-      box-sizing: border-box;
-      animation: rotation 1s linear infinite;
-    }
+  .loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid;
+    border-color: #ff3d00 transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
 
-    @keyframes rotation {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    } 
-    
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }
 
 #scene {
