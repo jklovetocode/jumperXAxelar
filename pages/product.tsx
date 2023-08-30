@@ -45,6 +45,7 @@ export default function () {
           swipeable
           emulateTouch
           interval={6000}
+          showThumbs={false}
         >
           <div>
             <Image
