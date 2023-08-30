@@ -43,7 +43,7 @@ export default function () {
     setDataNFT(userNFTFantom)
   }, [loadingNFTDataFantom])
   return (
-    <div className=' h-full w-full flex items-center justify-center font-bold'>
+    <div className=' h-full w-full flex items-center justify-center font-bold mt-[20px]'>
       <div
         className={`flex flex-row gap-2 mt-10 z-10 
       ${
@@ -61,7 +61,7 @@ export default function () {
             setDataNFT(userNFTFantom)
           }}
         >
-          Fantom Testnet
+          <div>Fantom Testnet</div>
         </Button>
         <Button
           className={`${tabChain == 'Avalanche Fuji' && 'bg-white text-black'}`}
@@ -82,7 +82,7 @@ export default function () {
           Polygon Mumbai
         </Button>
       </div>
-      <div className=' absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] grass rounded-xl grid grid-cols-3 overflow-y-scroll p-[10px] z-[10] items-center justify-center gap-y-[20px]'>
+      <div className=' absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] grass rounded-xl grid grid-cols-3 overflow-y-scroll p-[10px] z-[10] items-center justify-center gap-y-[20px] mt-[20px]'>
         {loadingNFTDataAvalanchefuji ||
         loadingNFTDataFantom ||
         loadingNFTDataPolygon ? (
