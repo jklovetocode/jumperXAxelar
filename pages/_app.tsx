@@ -48,7 +48,7 @@ const wagmiClient = createClient({
 function MyApp({ Component, pageProps }: AppProps) {
   let [star, setStar] = useState([] as number[])
   useEffect(() => {
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 200; i++) {
       star.push(i)
     }
     setStar([...star])
