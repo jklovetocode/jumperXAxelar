@@ -123,8 +123,8 @@ export default function () {
   ];
   return (
     <div className='h-full w-full'>
-      <div className='absolute top-[50px] left-[50px]  z-[3] flex flex-col gap-y-[10px] p-[10px] w-[500px] rounded-2xl h-full max-h-[600px] bg-white/10'>
-        <div className=' flex gap-[10px] sticky top-0'>
+      <div className='absolute top-[50px] left-[50px]  z-[3] flex flex-col gap-y-[10px] p-[10px] w-[750px] rounded-2xl h-full max-h-[600px] bg-white/10'>
+        <div className=' flex gap-[10pxw] sticky top-0'>
           {modeList.map((x, y) => (
             <div
               key={x.text}
